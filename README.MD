@@ -6,12 +6,6 @@
 
 本網站會透過 JavaScript 讀取 `data/cats.json`，因此請在專案資料夾使用本機伺服器，**不要直接雙擊 HTML**：
 
-```bash
-python -m http.server 8000
-```
-
-再前往 `http://localhost:8000/`。也可以直接部署 GitHub Pages。
-
 ## 圖片
 
 目前照片全部使用預留區。以後把以下檔案放入 `assets/images/cats/` 就會自動顯示：
