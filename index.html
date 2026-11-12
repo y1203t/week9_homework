@@ -2,77 +2,41 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Dear, Siwan｜任時完的非官方影視收藏館，收藏演員故事與影視作品。">
-  <title>Dear, Siwan｜任時完影視收藏館</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meowpedia 喵星人圖鑑：探索貓咪品種、外觀特徵、個性和照顧知識。">
+  <title>Meowpedia｜喵星人圖鑑</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
-<body>
+<body data-page="index">
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html">Dear, <span>Siwan ♡</span></a>
-      <nav class="nav-links" aria-label="主要導覽">
-        <a href="index.html" aria-current="page">首頁</a>
-        <a href="about.html">關於時完</a>
-        <a href="#featured">精選作品</a>
-      </nav>
+    <div class="shell nav-bar">
+      <a class="brand" href="index.html" aria-label="Meowpedia 首頁"><span class="brand-icon" aria-hidden="true">✿</span> Meowpedia<span class="brand-zh">喵星人圖鑑</span></a>
+      <nav aria-label="主要選單"><a class="nav-link active" href="index.html" aria-current="page">探索圖鑑</a><a class="nav-link" href="#about">關於本站</a></nav>
     </div>
   </header>
   <main>
-    <section class="container hero">
-      <div>
-        <div class="eyebrow">A little corner for Im Si-wan</div>
-        <h1>Dear,<br><em>Siwan.</em></h1>
-        <p class="lead">每個角色，都是值得珍藏的故事。這裡收集任時完的演員旅程，以及那些令人難忘的影視作品。</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#featured">探索作品 →</a>
-          <a class="btn btn-secondary" href="about.html">認識任時完</a>
-        </div>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">A LITTLE CAT ENCYCLOPEDIA</span>
+        <h1 id="hero-title">來認識<br><em>每一種可愛的喵星人。</em></h1>
+        <p>從蓬鬆的毛毛、獨特的個性，到日常照顧的小知識，陪你慢慢探索貓咪的世界。</p>
+        <a class="button primary" href="#collection">開始探索 <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="hero-visual">
-        <!-- 圖片預留：放入 assets/images/siwan-main.jpg 後會自動出現 -->
-        <div class="photo-slot hero-photo"><img src="assets/images/siwan-main.jpg" alt="任時完首頁形象照" onerror="this.hidden=true"></div>
-        <div class="tiny-note">Every role, a little memory ♡</div>
+      <div class="hero-art" aria-label="貓咪圖片預留區">
+        <div class="art-sticker sticker-top">MEOW! ♡</div>
+        <div class="cat-placeholder hero-placeholder"><span class="placeholder-icon" aria-hidden="true">✧</span><span>預留貓咪主視覺</span><small>assets/images/cats/hero.jpg</small></div>
+        <div class="art-sticker sticker-bottom">a tiny world of cats</div>
       </div>
     </section>
-
-    <section class="soft-band" id="featured">
-      <div class="container section">
-        <div class="section-heading">
-          <div><div class="eyebrow">Our little collection</div><h2 class="section-title">精選影視作品 <span class="decor-heart">♡</span></h2></div>
-          <p class="section-intro">從職場成長到青春喜劇，透過不同角色認識任時完。正式的作品列表頁將在下一階段加入。</p>
-        </div>
-        <div class="work-grid">
-          <article class="work-card">
-            <div class="work-art"><span>2014 · DRAMA</span><strong>MISAENG</strong></div>
-            <div class="work-info"><div class="work-meta">職場 · 成長</div><h3>未生</h3><p>飾演 張克萊｜在平凡生活中努力找到自己的位置。</p></div>
-          </article>
-          <article class="work-card">
-            <div class="work-art sage"><span>2020 · DRAMA</span><strong>RUN ON</strong></div>
-            <div class="work-info"><div class="work-meta">愛情 · 療癒</div><h3>Run On</h3><p>飾演 奇善謙｜關於理解、溝通與找到自己步調的故事。</p></div>
-          </article>
-          <article class="work-card">
-            <div class="work-art sand"><span>2023 · DRAMA</span><strong>BOYHOOD</strong></div>
-            <div class="work-info"><div class="work-meta">青春 · 喜劇</div><h3>少年時代</h3><p>飾演 張炳泰｜充滿反差魅力的青春校園故事。</p></div>
-          </article>
-        </div>
-      </div>
+    <section id="collection" class="collection shell" aria-labelledby="collection-title">
+      <div class="section-title"><div><span class="eyebrow">THE CAT COLLECTION</span><h2 id="collection-title">貓咪圖鑑 <span class="subtle">♡</span></h2><p>每個品種都有自己的故事，找到你想認識的喵星人吧。</p></div><span class="count-pill" id="cat-count">載入中…</span></div>
+      <div class="controls"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜尋貓咪名稱</span><input id="search-input" type="search" placeholder="搜尋貓咪品種…" autocomplete="off"></label><label class="filter-wrap"><span class="sr-only">依毛髮長度篩選</span><select id="coat-filter"><option value="all">所有毛髮類型</option><option value="長毛">長毛</option><option value="半長毛">半長毛</option><option value="短毛">短毛</option><option value="無毛">無毛</option></select></label></div>
+      <div id="cat-grid" class="cat-grid" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden>目前沒有符合條件的貓咪，試試其他關鍵字吧。</p>
     </section>
-
-    <section class="container section split">
-      <div class="intro-visual">
-        <!-- 圖片預留：放入 assets/images/siwan-about.jpg 後會自動出現 -->
-        <div class="photo-slot"><img src="assets/images/siwan-about.jpg" alt="任時完介紹區照片" onerror="this.hidden=true"></div>
-      </div>
-      <div>
-        <div class="eyebrow">More than a single role</div>
-        <h2 class="section-title">關於時完</h2>
-        <p class="section-intro">從偶像團體 ZE:A 成員到活躍於電影與電視劇的演員，任時完透過不同類型的作品，持續展現自己的演出面貌。</p>
-        <p class="quote">「一部作品，一種新的相遇。」</p>
-        <a class="text-link" href="about.html">閱讀演員介紹 →</a>
-      </div>
-    </section>
+    <section id="about" class="about-strip"><div class="shell about-content"><div><span class="eyebrow">ABOUT MEOWPEDIA</span><h2>為每隻貓咪，<br>留一個溫暖的小角落。</h2></div><p>Meowpedia 是一個持續成長的貓咪圖鑑。從第一隻布偶貓開始，未來會加入更多品種，提供淺顯易懂的介紹。不同貓咪的性格與需求仍有個體差異，照顧時請以實際狀況和獸醫建議為準。</p></div></section>
   </main>
-  <footer class="footer"><div class="container"><p>Dear, Siwan ♡ — Every role, a little memory.</p><p>非官方粉絲網站・僅供作品介紹與學習展示</p></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© Meowpedia · Made with ♡ for cats</span><span>此網站為學習用貓咪知識圖鑑</span></div></footer>
 </body>
 </html>
