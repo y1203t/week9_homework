@@ -21,9 +21,9 @@
 
 ## 圖片與授權
 
-布偶貓卡片與詳情頁使用專案既有圖片 `assets/images/ragdoll/ragdoll.png`。首頁主視覺維持預留區。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
+首頁主視覺、布偶貓卡片與詳情頁共用 JSON 裡設定的專案既有圖片 `assets/images/ragdoll/ragdoll.png`。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
 
-取得可使用的照片後，統一放入 `assets/images/cats/`，例如 `ragdoll.jpg`，並將 JSON 的 `image` 設為 `assets/images/cats/ragdoll.jpg`，填寫描述性的 `imageAlt`。請在本文件記錄作者、來源與授權條款。`image` 為空字串或圖片載入失敗時會顯示預留區。首頁主視覺亦暫用預留區。
+取得可使用的照片後，統一放入 `assets/images/cats/`，例如 `ragdoll.jpg`，並將 JSON 的 `image` 設為 `assets/images/cats/ragdoll.jpg`，填寫描述性的 `imageAlt`。請在本文件記錄作者、來源與授權條款。`image` 為空字串或圖片載入失敗時會顯示預留區。
 
 `AGENTS.md` 第 6.1 節也指定新增品種可用 `assets/images/<id>/<id>.png`，例如 `assets/images/siamese/siamese.png`；程式同時支援此格式與第 5 節的 `assets/images/cats/` 格式。
 

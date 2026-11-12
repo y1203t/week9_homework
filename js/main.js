@@ -10,8 +10,8 @@ function node(tag, className, text) {
   return el;
 }
 
-function addImageOrPlaceholder(container, cat, detail = false) {
-  const wrapper = node('div', detail ? 'detail-photo' : 'card-photo');
+function addImageOrPlaceholder(container, cat, variant = 'card') {
+  const wrapper = node('div', `${variant}-photo`);
   const placeholder = node('div', 'cat-placeholder');
   const glyph = node('span', 'placeholder-icon', '✧');
   glyph.setAttribute('aria-hidden', 'true');
@@ -64,6 +64,11 @@ function catCard(cat) {
 }
 
 function initIndex(cats) {
+  const heroPhoto = document.getElementById('hero-photo');
+  if (heroPhoto && cats.length) {
+    heroPhoto.replaceChildren();
+    addImageOrPlaceholder(heroPhoto, cats.find(cat => cat.id === 'ragdoll') || cats[0], 'hero');
+  }
   const grid = document.getElementById('cat-grid');
   const count = document.getElementById('cat-count');
   const empty = document.getElementById('empty-state');
@@ -97,7 +102,7 @@ function initDetail(cats) {
   }
   document.title = `${cat.name}｜Meowpedia 喵星人圖鑑`;
   const hero = node('section', 'detail-hero');
-  addImageOrPlaceholder(hero, cat, true);
+  addImageOrPlaceholder(hero, cat, 'detail');
   const copy = node('div', 'detail-heading');
   copy.append(node('span', 'eyebrow', '認識喵星人'), node('h1', '', cat.name), node('p', 'detail-english', cat.englishName), node('p', 'detail-summary', cat.summary));
   const meta = node('div', 'meta-chips');
