@@ -64,11 +64,6 @@ function catCard(cat) {
 }
 
 function initIndex(cats) {
-  const heroPhoto = document.getElementById('hero-photo');
-  if (heroPhoto && cats.length) {
-    heroPhoto.replaceChildren();
-    addImageOrPlaceholder(heroPhoto, cats.find(cat => cat.id === 'ragdoll') || cats[0], 'hero');
-  }
   const grid = document.getElementById('cat-grid');
   const count = document.getElementById('cat-count');
   const empty = document.getElementById('empty-state');

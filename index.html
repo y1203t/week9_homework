@@ -25,7 +25,10 @@
         <a class="button primary" href="#collection">開始探索 <span aria-hidden="true">↗</span></a>
       </div>
       <div class="hero-art">
-        <div id="hero-photo"><div class="cat-placeholder hero-placeholder"><span class="placeholder-icon" aria-hidden="true">✧</span><span>貓咪圖片預留區</span><small>正在準備貓咪照片</small></div></div>
+        <div id="hero-photo" class="hero-photo">
+          <img src="assets/images/profile/cat.png" alt="Meowpedia 貓咪主視覺" fetchpriority="high" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+          <div class="cat-placeholder hero-placeholder" hidden><span class="placeholder-icon" aria-hidden="true">✧</span><span>貓咪圖片暫時無法載入</span><small>請稍後重新整理頁面</small></div>
+        </div>
         <div class="art-sticker sticker-top">喵，歡迎你！</div>
         <div class="art-sticker sticker-bottom">一起探索貓咪的小世界</div>
       </div>

@@ -21,7 +21,7 @@
 
 ## 圖片與授權
 
-首頁主視覺、布偶貓卡片與詳情頁共用 JSON 裡設定的專案既有圖片 `assets/images/ragdoll/ragdoll.png`。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
+首頁主視覺直接在 HTML 引用 `assets/images/profile/cat.png`，不依賴 JavaScript 或 JSON 載入；布偶貓卡片與詳情頁則從 JSON 讀取 `assets/images/ragdoll/ragdoll.png`。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
 
 取得可使用的照片後，統一放入 `assets/images/cats/`，例如 `ragdoll.jpg`，並將 JSON 的 `image` 設為 `assets/images/cats/ragdoll.jpg`，填寫描述性的 `imageAlt`。請在本文件記錄作者、來源與授權條款。`image` 為空字串或圖片載入失敗時會顯示預留區。
 
