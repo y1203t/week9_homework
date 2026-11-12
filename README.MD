@@ -21,7 +21,7 @@
 
 ## 圖片與授權
 
-現有 `assets/images/profile/` 與 `assets/images/ragdoll/` 圖片未附授權紀錄，因此保留檔案但暫不顯示。
+布偶貓卡片與詳情頁使用專案既有圖片 `assets/images/ragdoll/ragdoll.png`。首頁主視覺維持預留區。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
 
 取得可使用的照片後，統一放入 `assets/images/cats/`，例如 `ragdoll.jpg`，並將 JSON 的 `image` 設為 `assets/images/cats/ragdoll.jpg`，填寫描述性的 `imageAlt`。請在本文件記錄作者、來源與授權條款。`image` 為空字串或圖片載入失敗時會顯示預留區。首頁主視覺亦暫用預留區。
 

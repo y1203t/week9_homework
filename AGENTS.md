@@ -50,7 +50,7 @@ AI 在修改網站前，必須先閱讀 `AGENTS.md` 及現有程式碼，了解�
 2. **新增圖片檔案**
    - 在 `assets/images/` 下建立以品種 ID 命名的資料夾，例如 `assets/images/siamese/`。
    - 將圖片命名為 `siamese.png`，完整路徑為 `assets/images/siamese/siamese.png`。
-   - 若尚未提供圖片，保留預設圖片區塊，不得使用授權不明的圖片。
+   - 若尚未提供圖片，保留預設圖片區塊，不得自行生成圖片。
 
 3. **修改 `data/cats.json`**
    - 保留原本的貓咪資料，在 JSON 陣列中新增一筆品種資料。
