@@ -6,7 +6,7 @@
 }
 #hero-photo{width:100%;min-width:0}
 .hero-photo{width:100%;height:330px;border-radius:155px 155px 22px 22px;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:55% center}
+.hero-photo img{width:100%;height:100%;object-fit:contain;object-position:center}
 .hero-photo .cat-placeholder{height:100%}
 @media(max-width:600px){.hero-photo{height:235px;border-radius:110px 110px 22px 22px}}
 /* Keyboard navigation and narrow-screen layout. */
