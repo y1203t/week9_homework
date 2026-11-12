@@ -5,17 +5,55 @@
     "englishName": "Ragdoll",
     "origin": "美國",
     "coat": "半長毛",
-    "tags": ["藍眼睛", "毛量豐富", "親人傾向"],
+    "tags": [
+      "藍眼睛",
+      "毛量豐富",
+      "親人傾向"
+    ],
     "summary": "以藍色眼睛與柔軟的半長毛聞名，通常被形容為溫和、喜歡與人相處的貓咪。",
     "appearance": "布偶貓多具有醒目的藍眼睛、重點色系的毛色與柔軟的半長毛，體型通常較大。不同花色與個體的外觀會有所不同。",
     "personality": "許多布偶貓被描述為溫和、愛與人互動，但個性會受到成長環境與每隻貓咪自身特質影響，不應只憑品種判斷。",
     "habits": "適合在有安全休息空間、互動遊戲與穩定作息的室內環境生活。牠們同樣需要玩耍、攀爬和探索的機會。",
-    "care": ["定期梳理毛髮，注意打結與換毛狀況。", "提供足夠飲水、均衡飲食與適當運動。", "安排定期獸醫健康檢查，照顧方式依個體需求調整。"],
+    "care": [
+      "定期梳理毛髮，注意打結與換毛狀況。",
+      "提供足夠飲水、均衡飲食與適當運動。",
+      "安排定期獸醫健康檢查，照顧方式依個體需求調整。"
+    ],
     "image": "assets/images/ragdoll/ragdoll.png",
     "imageAlt": "布偶貓照片",
     "sources": [
       "https://tica.org/breed/ragdoll/",
       "https://cfa.org/breed/ragdoll/",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/routine-health-care-for-cats"
+    ]
+  },
+  {
+    "id": "siamese",
+    "name": "暹羅貓",
+    "englishName": "Siamese",
+    "origin": "泰國（舊稱暹羅）",
+    "coat": "短毛",
+    "tags": [
+      "藍眼睛",
+      "重點色",
+      "喜愛互動"
+    ],
+    "summary": "以藍眼睛、重點色毛色與修長身形聞名，常被形容為活潑、喜歡與人互動的短毛貓。",
+    "appearance": "暹羅貓具有短而細緻的貼身毛髮，身體底色較淺，臉部、耳朵、四肢與尾巴呈現較深的重點色。常見特徵包括藍眼睛、大耳朵、修長的身體與尾巴；頭型、體態與毛色仍有個體差異。",
+    "personality": "許多暹羅貓被描述為好奇、愛玩，喜歡參與家中的活動，也可能經常以叫聲與人互動。個性與叫聲頻率會受到環境、成長經驗及個體特質影響，不應只憑品種判斷。",
+    "habits": "通常樂於探索與互動，適合提供貓抓柱、攀爬空間和輪替的玩具。每天安排遊戲與陪伴，同時保留可安靜休息、自由躲藏的地方，依牠的反應調整互動方式。",
+    "care": [
+      "定期輕柔梳理短毛，移除廢毛並觀察皮膚狀況，不需過度梳洗。",
+      "提供符合年齡的完整均衡飲食與乾淨飲水，依體態調整份量。",
+      "每天安排互動遊戲與活動機會，提供貓抓柱及安全的高處。",
+      "依個體需求安排獸醫健康檢查；若食慾、活動或叫聲突然改變，請諮詢獸醫。"
+    ],
+    "image": "assets/images/siamese/siamese.jpg",
+    "imageAlt": "藍眼睛、灰色重點色的暹羅貓坐在米色貓跳台上",
+    "sources": [
+      "https://tica.org/breed/siamese/",
+      "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/siamese/",
       "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats",
       "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/routine-health-care-for-cats"
     ]
