@@ -15,28 +15,30 @@
       <nav aria-label="主要選單"><a class="nav-link active" href="index.html" aria-current="page">探索圖鑑</a><a class="nav-link" href="#about">關於本站</a></nav>
     </div>
   </header>
-  <main>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+  <main id="main-content">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <span class="eyebrow">A LITTLE CAT ENCYCLOPEDIA</span>
+        <span class="eyebrow">溫暖的貓咪小百科</span>
         <h1 id="hero-title">來認識<br><em>每一種可愛的喵星人。</em></h1>
         <p>從蓬鬆的毛毛、獨特的個性，到日常照顧的小知識，陪你慢慢探索貓咪的世界。</p>
         <a class="button primary" href="#collection">開始探索 <span aria-hidden="true">↗</span></a>
       </div>
       <div class="hero-art" aria-label="貓咪圖片預留區">
-        <img src="assets/images/profile/cat.png" alt="貓咪剪影">
-        <div class="art-sticker sticker-top">MEOW! ♡</div>
-        <div class="art-sticker sticker-bottom">a tiny world of cats</div>
+        <div class="cat-placeholder hero-placeholder"><span class="placeholder-icon" aria-hidden="true">✧</span><span>貓咪圖片預留區</span><small>等待一張有授權的可愛照片</small></div>
+        <div class="art-sticker sticker-top">喵，歡迎你！</div>
+        <div class="art-sticker sticker-bottom">一起探索貓咪的小世界</div>
       </div>
     </section>
     <section id="collection" class="collection shell" aria-labelledby="collection-title">
-      <div class="section-title"><div><span class="eyebrow">THE CAT COLLECTION</span><h2 id="collection-title">貓咪圖鑑 <span class="subtle">♡</span></h2><p>每個品種都有自己的故事，找到你想認識的喵星人吧。</p></div><span class="count-pill" id="cat-count">載入中…</span></div>
+      <div class="section-title"><div><span class="eyebrow">探索品種的獨特魅力</span><h2 id="collection-title">貓咪圖鑑 <span class="subtle">♡</span></h2><p>每個品種都有自己的故事，找到你想認識的喵星人吧。</p></div><span class="count-pill" id="cat-count">載入中…</span></div>
       <div class="controls"><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">搜尋貓咪名稱</span><input id="search-input" type="search" placeholder="搜尋貓咪品種…" autocomplete="off"></label><label class="filter-wrap"><span class="sr-only">依毛髮長度篩選</span><select id="coat-filter"><option value="all">所有毛髮類型</option><option value="長毛">長毛</option><option value="半長毛">半長毛</option><option value="短毛">短毛</option><option value="無毛">無毛</option></select></label></div>
       <div id="cat-grid" class="cat-grid" aria-live="polite"></div>
       <p id="empty-state" class="empty-state" hidden>目前沒有符合條件的貓咪，試試其他關鍵字吧。</p>
     </section>
-    <section id="about" class="about-strip"><div class="shell about-content"><div><span class="eyebrow">ABOUT MEOWPEDIA</span><h2>為每隻貓咪，<br>留一個溫暖的小角落。</h2></div><p>Meowpedia 是一個持續成長的貓咪圖鑑。從第一隻布偶貓開始，未來會加入更多品種，提供淺顯易懂的介紹。不同貓咪的性格與需求仍有個體差異，照顧時請以實際狀況和獸醫建議為準。</p></div></section>
+    <section id="about" class="about-strip"><div class="shell about-content"><div><span class="eyebrow">關於喵星人圖鑑</span><h2>為每隻貓咪，<br>留一個溫暖的小角落。</h2></div><p>Meowpedia 是一個持續成長的貓咪圖鑑。從第一隻布偶貓開始，未來會加入更多品種，提供淺顯易懂的介紹。不同貓咪的性格與需求仍有個體差異，照顧時請以實際狀況和獸醫建議為準。</p></div></section>
   </main>
-  <footer class="site-footer"><div class="shell footer-inner"><span>© Meowpedia · Made with ♡ for cats</span><span>此網站為學習用貓咪知識圖鑑</span></div></footer>
+  <noscript><p class="error-panel">請啟用 JavaScript，以載入貓咪圖鑑與搜尋功能。</p></noscript>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© Meowpedia · 用愛認識每隻貓咪</span><span>此網站為學習用貓咪知識圖鑑</span></div></footer>
 </body>
 </html>

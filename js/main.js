@@ -15,15 +15,18 @@ function addImageOrPlaceholder(container, cat, detail = false) {
   const placeholder = node('div', 'cat-placeholder');
   const glyph = node('span', 'placeholder-icon', '✧');
   glyph.setAttribute('aria-hidden', 'true');
-  placeholder.append(glyph, node('span', '', FALLBACK_IMAGE_MESSAGE), node('small', '', cat.image || '尚未設定圖片'));
+  placeholder.append(glyph, node('span', '', FALLBACK_IMAGE_MESSAGE), node('small', '', '期待與牠見面的那一天'));
   const img = document.createElement('img');
-  img.src = cat.image || '';
   img.alt = cat.imageAlt || `${cat.name}的照片`;
-  img.loading = detail ? 'eager' : 'lazy';
+  // Hidden lazy images may never start loading in some browsers.
+  img.loading = 'eager';
   img.hidden = true;
   img.addEventListener('load', () => { img.hidden = false; placeholder.hidden = true; });
   img.addEventListener('error', () => { img.hidden = true; placeholder.hidden = false; });
-  if (cat.image) wrapper.append(img);
+  if (cat.image) {
+    wrapper.append(img);
+    img.src = cat.image;
+  }
   wrapper.append(placeholder);
   container.append(wrapper);
 }
@@ -33,6 +36,17 @@ async function fetchCats() {
   if (!res.ok) throw new Error('資料讀取失敗');
   const cats = await res.json();
   if (!Array.isArray(cats)) throw new Error('貓咪資料格式有誤');
+  const ids = new Set();
+  const strings = ['id', 'name', 'englishName', 'origin', 'coat', 'summary', 'appearance', 'personality', 'habits', 'image', 'imageAlt'];
+  for (const cat of cats) {
+    if (!cat || strings.some(key => typeof cat[key] !== 'string') ||
+        ['tags', 'care', 'sources'].some(key => !Array.isArray(cat[key]) || cat[key].some(item => typeof item !== 'string')) ||
+        !/^[a-z]+(?:-[a-z]+)*$/.test(cat.id) || ids.has(cat.id) ||
+        (cat.image && !new RegExp(`^assets/images/(?:cats|${cat.id})/[a-z0-9-]+\\.(?:png|jpe?g|webp|avif)$`).test(cat.image))) {
+      throw new Error('貓咪資料欄位、圖片路徑或 ID 有誤');
+    }
+    ids.add(cat.id);
+  }
   return cats;
 }
 
@@ -57,7 +71,7 @@ function initIndex(cats) {
   const coat = document.getElementById('coat-filter');
   function render() {
     const q = search.value.trim().toLocaleLowerCase();
-    const result = cats.filter(c => (coat.value === 'all' || c.coat === coat.value) && [c.name, c.englishName, c.summary, ...(c.tags || [])].join(' ').toLocaleLowerCase().includes(q));
+    const result = cats.filter(c => (coat.value === 'all' || c.coat === coat.value) && [c.name, c.englishName].join(' ').toLocaleLowerCase().includes(q));
     grid.replaceChildren(...result.map(catCard));
     count.textContent = `共 ${result.length} 種貓咪`;
     empty.hidden = result.length > 0;
@@ -85,7 +99,7 @@ function initDetail(cats) {
   const hero = node('section', 'detail-hero');
   addImageOrPlaceholder(hero, cat, true);
   const copy = node('div', 'detail-heading');
-  copy.append(node('span', 'eyebrow', 'MEET THE CAT'), node('h1', '', cat.name), node('p', 'detail-english', cat.englishName), node('p', 'detail-summary', cat.summary));
+  copy.append(node('span', 'eyebrow', '認識喵星人'), node('h1', '', cat.name), node('p', 'detail-english', cat.englishName), node('p', 'detail-summary', cat.summary));
   const meta = node('div', 'meta-chips');
   meta.append(node('span', '', `原產地：${cat.origin}`), node('span', '', `毛髮：${cat.coat}`));
   copy.append(meta);

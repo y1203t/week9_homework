@@ -11,8 +11,13 @@
     "personality": "許多布偶貓被描述為溫和、愛與人互動，但個性會受到成長環境與每隻貓咪自身特質影響，不應只憑品種判斷。",
     "habits": "適合在有安全休息空間、互動遊戲與穩定作息的室內環境生活。牠們同樣需要玩耍、攀爬和探索的機會。",
     "care": ["定期梳理毛髮，注意打結與換毛狀況。", "提供足夠飲水、均衡飲食與適當運動。", "安排定期獸醫健康檢查，照顧方式依個體需求調整。"],
-    "image": "assets/images/ragdoll/ragdoll.png",
+    "image": "",
     "imageAlt": "布偶貓照片",
-    "sources": []
+    "sources": [
+      "https://tica.org/breed/ragdoll/",
+      "https://cfa.org/breed/ragdoll/",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/routine-health-care-for-cats"
+    ]
   }
 ]
