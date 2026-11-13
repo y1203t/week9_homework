@@ -1,34 +1,71 @@
-﻿# Meowpedia｜喵星人圖鑑
+# Meowpedia｜喵星人圖鑑
 
-繁體中文貓咪圖鑑，第一版收錄布偶貓。首頁提供中英文名稱搜尋與毛髮類型篩選；`cat.html?id=ragdoll` 使用共用品種模板。
+以繁體中文介紹貓咪品種的靜態網站，包含外觀、個性、生活習性與照顧重點。使用 HTML、CSS、JavaScript 與 JSON，無須建置。
+
+## 網站功能
+
+- 依中英文名稱搜尋、依毛髮類型篩選品種。
+- 從首頁卡片進入共用品種詳情頁，閱讀介紹與參考來源。
+- 支援手機與桌面排版，圖片缺少或載入失敗時顯示預留區。
+
+## 目前收錄
+
+| 品種 | 英文名稱 | 毛髮類型 | 詳情頁 |
+| --- | --- | --- | --- |
+| 布偶貓 | Ragdoll | 半長毛 | [認識布偶貓](cat.html?id=ragdoll) |
+| 暹羅貓 | Siamese | 短毛 | [認識暹羅貓](cat.html?id=siamese) |
 
 ## 本機預覽
 
-在專案目錄執行 `npx --yes http-server . -p 8080`，再開啟 http://localhost:8080 。此指令首次執行需要網路與 Node.js；也可以使用 VS Code Live Server 或 GitHub Pages。請勿直接雙擊 HTML，因為網站需要透過 HTTP 讀取 JSON。
+使用 VS Code Live Server，或安裝 Node.js 後在專案目錄執行：
 
-## GitHub Pages 展示
+```sh
+npx --yes http-server . -p 8080
+```
 
-本專案是純靜態網站，不需要 npm 安裝或建置。根目錄的 `index.html` 是展示入口，`.nojekyll` 讓 GitHub Pages 直接提供靜態檔案。CSS、JavaScript、JSON 與詳情連結均採相對路徑，可在儲存庫子路徑下運作。
+開啟 http://localhost:8080 。首次執行此指令需要網路下載預覽工具。網站以 `fetch` 讀取 JSON，請透過 HTTP 預覽，不要直接雙擊 HTML。
 
-1. 將專案檔案（包含 `.nojekyll`、`css/`、`js/`、`data/`、`assets/`）提交並推送到 GitHub 的 `main` 分支。
-2. 到儲存庫 **Settings → Pages → Build and deployment**。
-3. 將 **Source** 設為 **Deploy from a branch**，選擇 **main** 與 **/(root)**，按 **Save**。
-4. 等待 GitHub 的 Pages 部署成功，再開啟 https://y1203t.github.io/week9_homework/ 。布偶貓詳情為 https://y1203t.github.io/week9_homework/cat.html?id=ragdoll 。
+## GitHub Pages
 
-這是預期展示網址；本機修改不會自動更新線上網站。部署後請確認首頁卡片、搜尋、毛髮篩選、詳情頁及手機瀏覽。若顯示 README 或 404，請檢查發布目錄是否為 `/(root)`，且該分支根目錄有小寫 `index.html`。若顯示資料載入失敗，請確認 `data/cats.json` 已一併推送，且檔名大小寫一致。
+預期展示網址：[Meowpedia 喵星人圖鑑](https://y1203t.github.io/week9_homework/)。
 
-設定依據：[GitHub Pages 發布來源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+1. 將專案檔案推送到 GitHub 的 `main` 分支，包含 `.nojekyll`、樣式、程式、JSON 與圖片。
+2. 開啟儲存庫 **Settings → Pages**。
+3. 選擇 **Deploy from a branch → main → /(root)**，儲存並等待部署完成。
 
-## 圖片與授權
+`index.html` 是網站入口，`.nojekyll` 用於停用 Jekyll 處理。站內資源使用相對路徑，支援儲存庫子路徑。本機修改須推送並完成部署，才會更新線上網站。
 
-首頁主視覺直接在 HTML 引用 `assets/images/profile/cat.png`，不依賴 JavaScript 或 JSON 載入；布偶貓卡片與詳情頁則從 JSON 讀取 `assets/images/ragdoll/ragdoll.png`。新增品種時優先使用使用者提供的圖片，沒有圖片則保留預留區，不自行生成圖片；使用外部圖片時須確認授權。
+## 檔案結構
 
-取得可使用的照片後，統一放入 `assets/images/cats/`，例如 `ragdoll.jpg`，並將 JSON 的 `image` 設為 `assets/images/cats/ragdoll.jpg`，填寫描述性的 `imageAlt`。請在本文件記錄作者、來源與授權條款。`image` 為空字串或圖片載入失敗時會顯示預留區。
+```text
+├── AGENTS.md                         # AI 修改與擴充規則
+├── README.MD                         # 專案使用說明
+├── .nojekyll                         # GitHub Pages 靜態檔案設定
+├── index.html                        # 首頁、搜尋與圖鑑
+├── cat.html                          # 共用品種詳情模板
+├── css/style.css                     # 共用樣式
+├── js/main.js                        # 資料載入與頁面互動
+├── data/cats.json                    # 品種資料
+└── assets/images/
+    ├── profile/cat.png               # 首頁貓咪剪影
+    ├── ragdoll/ragdoll.png            # 布偶貓照片
+    └── siamese/siamese.jpg            # 暹羅貓照片
+```
 
-`AGENTS.md` 第 6.1 節也指定新增品種可用 `assets/images/<id>/<id>.png`，例如 `assets/images/siamese/siamese.png`；程式同時支援此格式與第 5 節的 `assets/images/cats/` 格式。
+## 新增品種
 
-## 擴充品種
+請先閱讀 [AGENTS.md](AGENTS.md)。
 
-在 `data/cats.json` 陣列新增一筆物件，完整沿用既有欄位。`tags`、`care`、`sources` 為字串陣列，`id` 必須唯一，使用英文小寫與連字號；`image` 可為空字串。查證照顧知識並將網址填入 `sources`，描述個性時保留個體差異。
+1. 確認品種名稱，查證介紹與照顧知識。
+2. 將圖片放入 `assets/images/<id>/<id>.<副檔名>`，保留實際圖片格式。
+3. 在 `data/cats.json` 新增一筆物件，沿用既有欄位，使用唯一的英文小寫及連字號 ID。
+4. 填寫 `image`、`imageAlt` 與 `sources`；沒有圖片時，`image` 填空字串。
+5. 透過 HTTP 檢查卡片、詳情連結、搜尋、篩選、圖片及手機排版。
 
-新增資料後，共用卡片與詳情頁會自動呈現，不需新增 HTML。請透過 HTTP 確認名稱搜尋、毛髮篩選、空結果、詳情頁、未知 ID、圖片預留區及手機版排版。
+新增資料後，卡片與 `cat.html?id=<id>` 會由既有程式產生，不需建立新 HTML。首頁主視覺固定使用 `profile/cat.png`，不可換成品種照片。
+
+## 圖片與資料來源
+
+目前使用專案內提供的圖片，不自行生成圖片。新增外部圖片時，須確認使用授權，並在此記錄作者、來源及授權條款。
+
+品種知識的參考網址列於 `data/cats.json` 的 `sources`，並顯示於詳情頁。介紹為一般性資訊，個性與照顧需求因個體而異，健康問題請諮詢獸醫。
