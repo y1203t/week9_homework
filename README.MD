@@ -14,6 +14,10 @@
 | --- | --- | --- | --- |
 | 布偶貓 | Ragdoll | 半長毛 | [認識布偶貓](cat.html?id=ragdoll) |
 | 暹羅貓 | Siamese | 短毛 | [認識暹羅貓](cat.html?id=siamese) |
+| 無毛貓（外觀通稱） | Hairless Cat | 無毛 | [認識無毛貓](cat.html?id=hairless-cat) |
+| 挪威森林貓 | Norwegian Forest Cat | 半長毛 | [認識挪威森林貓](cat.html?id=norwegian) |
+
+無毛貓卡片介紹少毛或近乎無毛的外觀與一般照護，未將照片中的貓咪判定為特定品種；照護來源包含斯芬克斯貓資料，實際需求仍須依個體調整。
 
 ## GitHub Pages
 
@@ -39,7 +43,9 @@
 └── assets/images/
     ├── profile/                      # 首頁貓咪照片
     ├── ragdoll/                      # 布偶貓照片
-    └── siamese/                      # 暹羅貓照片
+    ├── siamese/                      # 暹羅貓照片
+    ├── hairless-cat/                 # 無毛貓照片
+    └── norwegian/                    # 挪威森林貓照片
 ```
 
 ## 新增品種

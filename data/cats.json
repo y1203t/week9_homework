@@ -57,5 +57,53 @@
       "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats",
       "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/routine-health-care-for-cats"
     ]
+  },
+  {
+    "id": "hairless-cat",
+    "name": "無毛貓",
+    "englishName": "Hairless Cat",
+    "origin": "依品種而異（此處為無毛外觀的通稱）",
+    "coat": "無毛",
+    "tags": ["無毛外觀", "皮膚照護", "注意保暖"],
+    "summary": "以少毛或近乎無毛的外觀為特色；無毛貓是通稱，本卡不將照片中的貓咪判定為特定品種。",
+    "appearance": "外露的皮膚與皺褶是照片中容易觀察到的特徵。部分無毛品種仍有細緻絨毛，並非完全沒有毛髮；體型、耳形與皮膚顏色依品種及個體而異。",
+    "personality": "不能單憑無毛外觀推斷個性。每隻貓咪對陪伴、抱持與遊戲的喜好不同，互動時應觀察牠的反應並尊重牠的選擇。",
+    "habits": "提供溫暖、舒適的室內休息處，避免寒冷與強烈日曬；同時準備貓抓柱、躲藏處與遊戲空間，讓牠能自行選擇活動或休息。",
+    "care": [
+      "觀察皮膚油脂與皺褶處的清潔狀況，依個體需求與獸醫建議安排清潔，不自行套用固定洗澡頻率。",
+      "注意環境溫度與保暖，避免長時間直接曝曬。",
+      "提供均衡飲食、乾淨飲水與適當活動，並安排定期獸醫健康檢查。"
+    ],
+    "image": "assets/images/hairless-cat/hairless-cat.jpg",
+    "imageAlt": "兩隻深灰色與粉膚色的無毛貓相擁，蜷睡在豹紋貓窩裡",
+    "sources": [
+      "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/sphynx/",
+      "https://tica.org/breed/sphynx/",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats"
+    ]
+  },
+  {
+    "id": "norwegian",
+    "name": "挪威森林貓",
+    "englishName": "Norwegian Forest Cat",
+    "origin": "挪威",
+    "coat": "半長毛",
+    "tags": ["雙層被毛", "蓬鬆尾巴", "喜愛攀爬"],
+    "summary": "來自挪威的自然品種，擁有濃密雙層被毛與蓬鬆長尾，常被形容為友善、喜歡探索的貓咪。",
+    "appearance": "體格結實，具有半長的雙層被毛、三角形頭部與蓬鬆長尾。頸部毛領與毛量可能隨季節改變，毛色、眼色及體型仍有個體差異。",
+    "personality": "許多挪威森林貓被描述為友善、好奇，喜歡參與家中活動，但不一定喜歡被抱。個性會受到成長經驗、環境與個體特質影響。",
+    "habits": "通常喜歡攀爬、觀察高處與探索環境。可提供穩固的貓跳台、貓抓柱及互動玩具，並保留安靜休息的空間。",
+    "care": [
+      "定期梳理雙層被毛並檢查打結，換毛期視毛況增加梳理。",
+      "提供穩固且適合體型的攀爬設施，安排每日遊戲與活動。",
+      "提供均衡飲食與乾淨飲水，依體態調整份量並安排定期獸醫健康檢查。"
+    ],
+    "image": "assets/images/norwegian/norwegian.jpg",
+    "imageAlt": "一隻毛量豐厚、尾巴蓬鬆的棕黑色虎斑貓在雪地上行走",
+    "sources": [
+      "https://www.gccfcats.org/getting-a-cat/choosing/cat-breeds/norwegian-forest-cat/",
+      "https://tica.org/breed/norwegian-forest/",
+      "https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/cats/health/caring-for-cats"
+    ]
   }
 ]
