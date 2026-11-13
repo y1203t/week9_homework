@@ -15,16 +15,6 @@
 | 布偶貓 | Ragdoll | 半長毛 | [認識布偶貓](cat.html?id=ragdoll) |
 | 暹羅貓 | Siamese | 短毛 | [認識暹羅貓](cat.html?id=siamese) |
 
-## 本機預覽
-
-使用 VS Code Live Server，或安裝 Node.js 後在專案目錄執行：
-
-```sh
-npx --yes http-server . -p 8080
-```
-
-開啟 http://localhost:8080 。首次執行此指令需要網路下載預覽工具。網站以 `fetch` 讀取 JSON，請透過 HTTP 預覽，不要直接雙擊 HTML。
-
 ## GitHub Pages
 
 預期展示網址：[Meowpedia 喵星人圖鑑](https://y1203t.github.io/week9_homework/)。
@@ -47,9 +37,9 @@ npx --yes http-server . -p 8080
 ├── js/main.js                        # 資料載入與頁面互動
 ├── data/cats.json                    # 品種資料
 └── assets/images/
-    ├── profile/cat.png               # 首頁貓咪剪影
-    ├── ragdoll/ragdoll.png            # 布偶貓照片
-    └── siamese/siamese.jpg            # 暹羅貓照片
+    ├── profile/                      # 首頁貓咪照片
+    ├── ragdoll/                      # 布偶貓照片
+    └── siamese/                      # 暹羅貓照片
 ```
 
 ## 新增品種
